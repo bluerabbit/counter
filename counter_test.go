@@ -15,7 +15,7 @@ func Test(t *testing.T) {
 		PoolTimeout: 10,
 	})
 
-	c := NewCounter(client, "key")
+	c := New(client, "key")
 	c.Set(1)
 
 	v1, error := c.Get()

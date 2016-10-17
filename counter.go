@@ -10,7 +10,7 @@ type Counter struct {
 	key    string
 }
 
-func NewCounter(client *redis.Client, key string) *Counter {
+func New(client *redis.Client, key string) *Counter {
 	return &Counter{
 		client: client,
 		key: key,
