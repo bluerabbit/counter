@@ -18,13 +18,13 @@ client = redis.NewClient(&redis.Options{
   PoolTimeout: 10,
 })
 
-var counter = counter.NewCounter(client, "comment_count")
+var c = counter.NewCounter(client, "comment_count")
 
-value, ok := counter.Set(1)
-counter.Incr() // 2
-counter.Incr() // 3
-counter.Decr() // 2
-counter.Get()  // 2
+value, ok := c.Set(1)
+c.Incr() // 2
+c.Incr() // 3
+c.Decr() // 2
+c.Get()  // 2
 ```
 
 ## License
